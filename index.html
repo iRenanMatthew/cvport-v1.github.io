@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="portfolio">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Renan Matthew - Portfolio</title>
+    <link rel="stylesheet" href="/lib/css/app.css" />
+    <script src="/lib/js/angular.min.js"></script>
+    <script src="/lib/js/angular-custom-common.js"></script>
   </head>
-  <body>
-    <h1>Hello World</h1>
+  <body ng-controller="CommonController">
+    <h1>{{message}}</h1>
+    <div ng-repeat="test in testRepeat">
+      <span>{{test.num}}.</span>
+      <span>{{test.name}}</span>
+    </div>
+
+    <div ng-repeat="test in testJson">
+      <span>{{test.name}}.</span>
+      <span>{{test.content}}</span>
+    </div>
   </body>
 </html>
